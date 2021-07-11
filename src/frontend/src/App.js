@@ -1,13 +1,13 @@
 import './App.scss';
 import { TeamPage } from './pages/TeamPage';
 import { MatchPage } from './pages/MatchPage';
-import {BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import { HomePage } from './pages/HomePage';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Switch>
           <Route path = "/teams/:teamName/matches/:year">
             <MatchPage />
@@ -19,7 +19,7 @@ function App() {
             <HomePage />
           </Route>
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
